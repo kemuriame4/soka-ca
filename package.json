@@ -4,28 +4,27 @@
 	"description": "Main theme project for Soka-ca",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"shopify": "shopify theme dev --store pwfc48-t1.myshopify.com --port 7878",
-        "dev": "shopify theme dev --store pwfc48-t1.myshopify.com --port 7878 --host localhost",
-        "start": "shopify theme dev --store pwfc48-t1.myshopify.com --port 9988"
+		"dev": "shopify theme dev --store pwfc48-t1.myshopify.com --port 7878 --host localhost",
+		"start": "shopify theme dev --store pwfc48-t1.myshopify.com --port 9988",
+		"build": "vite build",
+		"watch": "vite build --watch"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/soka-ca/soka-ca.git"
 	},
-	"keywords": [
-		"color",
-		"palette",
-		"palette-generator",
-		"color-palette",
-		"color-palette-generator"
-	],
 	"author": "kemuriame4@gmail.com",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/soka-ca/soka-ca/issues"
 	},
-    "dependencies": {
-        "shopify": "^3.74.1"
-    }
+	"devDependencies": {
+		"@shopify/cli": "^3.81.2",
+		"@tailwindcss/postcss": "^4.1.10",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.10",
+		"vite": "^6.3.5"
+	}
 }
