@@ -1,0 +1,31 @@
+{
+	"name": "soka-ca",
+	"version": "1.0.0",
+	"description": "Main theme project for Soka-ca",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"shopify": "shopify theme dev --store pwfc48-t1.myshopify.com --port 7878",
+        "dev": "shopify theme dev --store pwfc48-t1.myshopify.com --port 7878 --host localhost",
+        "start": "shopify theme dev --store pwfc48-t1.myshopify.com --port 9988"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/soka-ca/soka-ca.git"
+	},
+	"keywords": [
+		"color",
+		"palette",
+		"palette-generator",
+		"color-palette",
+		"color-palette-generator"
+	],
+	"author": "kemuriame4@gmail.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/soka-ca/soka-ca/issues"
+	},
+    "dependencies": {
+        "shopify": "^3.74.1"
+    }
+}
