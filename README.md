@@ -1,16 +1,33 @@
 # Here's the main project folder for SOKA.CA
 
+## CHANGE
+add files: [package.json](package.json), [vite.config.js](vite.config.js), [tailwind.config.js](tailwind.config.js), [postcss.config.js](postcss.config.js)
+
+add files: [tailwind.css](src/styles/tailwind.css)
+
+add lines to file: [theme.liquid](layout/theme.liquid#L353)
+```js
+  {%  comment  %} add export css files {% endcomment %}
+  {{ 'app.css' | asset_url | stylesheet_tag }}
+```
+
+add lines to file: [theme.liquid](layout/theme.liquid#L435)
+```js
+  {% comment %} add export js files
+  {{ 'app.js' |  asset_url | script_tag }} {% endcomment %}
+```
+
 ## START
 ### USE DOCKER
-1. Add a new docker by `.devcontainer/devcontainer.json` (or any image you like)
+1. Add a new docker by [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json)
 2. upgrade the image core
-```bsh
+```bash
 apt update
 apt upgrade
 ```
-2. download the devtools (**nodejs**, **bun** or someone you use commonly)
+2. download the devtools ([**nodejs**](https://nodejs.org/en/download), [**bun**](http://bun.sh), or someone you use commonly)
 ### RUN the ENV
-```bush
+```bash
 # init the dev env
 npm install
 
@@ -23,11 +40,11 @@ npm run watch
 npm run shopify
 ```
 
-Then, take your develop!
+### **Then, take your *development* !**
 
 ## ERROR
 ### Network speed
-change apt sources`/etc/apt/sources.list` to tsinghua
+change linux apt sources [/etc/apt/sources.list]() to tsinghua
 ```bash
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse
